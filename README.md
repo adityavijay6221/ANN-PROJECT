@@ -2,6 +2,7 @@
 # 1. Problem Statement
 Customer churn — when clients stop doing business with a company — is a key challenge for subscription-based and service industries.  
 The objective of this project is to **predict the likelihood of customer churn** using an **Artificial Neural Network (ANN)** model, enabling proactive retention strategies and improving long-term customer value.
+
 **Goal:**  
 Build and deploy an ANN model that predicts whether a customer will leave the bank based on demographic and behavioral data.
 
@@ -15,7 +16,7 @@ Build and deploy an ANN model that predicts whether a customer will leave the ba
    - Applied **Label Encoding** to `Gender`.  
    - Applied **One-Hot Encoding** to `Geography`.
 -  **Feature Scaling:** Standardized numerical variables using `StandardScaler`.
--  
+  
 ## 3. Model Architecture and Training
 ### **Model Type**
 A fully connected **Feedforward Artificial Neural Network (ANN)** built using **TensorFlow / Keras**.
@@ -27,12 +28,12 @@ Loss: Binary Crossentropy
 Callbacks: EarlyStopping for convergence
 
 ## 4. Evaluation Metrics
-| Metric              | Value |
-| Training Accuracy   |   86% |
-| Test Accuracy       | 85.6% |
-| Precision           |  0.82 |
-| Recall              |  0.79 |
-| F1-Score            |  0.80 |
+| Metric    | Value | Description                          |
+| --------- | ----- | ------------------------------------ |
+| Accuracy  | ~86%  | Overall correctness                  |
+| Precision | 0.82  | Positive prediction quality          |
+| Recall    | 0.79  | Ability to detect churners           |
+| F1-Score  | 0.80  | Balance between precision and recall |
 
 ## 5. Deployment and Impact
 Deployment using Streamlit
@@ -44,9 +45,6 @@ The trained ANN model (model.h5) was deployed using a Streamlit app (app.py) for
 sc.pkl → Scaler
 le.pkl → LabelEncoder
 oh.pkl → OneHotEncoder
-## Output Interpretation:
-> 0.5: Customer likely to churn
-≤ 0.5: Customer likely to stay
 
 ## Business Impact
 - Enables proactive customer retention strategies.
